@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"go/note/config"
+	"go/note/middleware"
 	"go/note/util"
 	"io"
 	"log"
@@ -24,6 +25,7 @@ func StartServer() {
 	f, _ := os.OpenFile("log/log", os.O_RDWR|os.O_APPEND, 0755)
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 	router := gin.Default()
+	router.Use(middleware.Cors())
 
 	//注册路由
 	router.GET("/", func(c *gin.Context) {

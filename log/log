@@ -286,3 +286,29 @@
 [GIN] 2022/12/21 - 20:10:30 | 200 |      3.3257ms |             ::1 | GET      "/captcha"
 [GIN] 2022/12/21 - 20:11:05 | 200 |            0s |             ::1 | POST     "/parseCaptcha?id=QtY2qK2uOxOqc6DuYJRY&code=5539"
 [GIN] 2022/12/21 - 20:12:49 | 200 |       166.7µs |             ::1 | POST     "/parseCaptcha?id=QtY2qK2uOxOqc6DuYJRY&code=5539"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN-debug] POST   /parseCaptcha             --> go/note/server.StartServer.func5 (3 handlers)
+[GIN-debug] GET    /email                    --> go/note/server.StartServer.func6 (3 handlers)
+[GIN] 2022/12/21 - 20:26:34 | 200 |    1.4209574s |             ::1 | GET      "/email"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (4 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (4 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (4 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (4 handlers)
+[GIN-debug] POST   /parseCaptcha             --> go/note/server.StartServer.func5 (4 handlers)
+[GIN-debug] GET    /email                    --> go/note/server.StartServer.func6 (4 handlers)
+[GIN] 2022/12/21 - 21:16:14 | 200 |    5.0109073s |             ::1 | GET      "/"
