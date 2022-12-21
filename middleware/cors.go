@@ -8,5 +8,6 @@ import (
 func Cors() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		cors.Default()
+		c.Next()
 	}
 }
