@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"go/note/config"
+	"go/note/util"
 	"io"
 	"log"
 	"net/http"
@@ -14,6 +15,10 @@ import (
 )
 
 func StartServer() {
+	//连接mysql数据库
+	_ = util.Mydb.LinkMysqlDB()
+	// 连接redis数据库
+	_ = util.Redb.LinkRedisDB()
 	f, _ := os.OpenFile("log/log", os.O_RDWR|os.O_APPEND, 0755)
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 	router := gin.Default()
