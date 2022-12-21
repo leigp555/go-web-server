@@ -19,19 +19,40 @@ func StartServer() {
 	_ = util.Mydb.LinkMysqlDB()
 	// 连接redis数据库
 	_ = util.Redb.LinkRedisDB()
+
+	//gin配置log文件
 	f, _ := os.OpenFile("log/log", os.O_RDWR|os.O_APPEND, 0755)
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 	router := gin.Default()
+
+	//注册路由
 	router.GET("/", func(c *gin.Context) {
 		time.Sleep(5 * time.Second)
 		c.String(http.StatusOK, "Welcome Gin Server")
 	})
-
+	//获取token
+	router.GET("/token", func(c *gin.Context) {
+		token, err := util.GenerateToken("我是你的眼")
+		if err != nil {
+			c.JSON(400, gin.H{"msg": "token生成失败"})
+		}
+		c.String(http.StatusOK, token)
+	})
+	//解析token
+	router.POST("/parse", func(c *gin.Context) {
+		str, _ := c.GetQuery("token")
+		username, err2 := util.ParseToken(str)
+		if err2 != nil {
+			c.JSON(400, gin.H{"msg": "token验证失败"})
+		}
+		c.String(http.StatusOK, username)
+	})
+	//监听端口
 	srv := &http.Server{
 		Addr:    fmt.Sprintf("0.0.0.0:%s", config.GlobalConfig.Port),
 		Handler: router,
 	}
-
+	//服务启停
 	go func() {
 		// 服务连接
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {

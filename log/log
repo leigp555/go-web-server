@@ -36,3 +36,127 @@
  - using code:	gin.SetMode(gin.ReleaseMode)
 
 [GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN] 2022/12/21 - 18:27:24 | 200 |    5.0133992s |       127.0.0.1 | GET      "/"
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+[GIN] 2022/12/21 - 18:27:29 | 200 |       386.7µs |       127.0.0.1 | GET      "/token"
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+[GIN] 2022/12/21 - 18:27:49 | 200 |       251.5µs |       127.0.0.1 | GET      "/token"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+[GIN] 2022/12/21 - 18:28:10 | 200 |       723.7µs |             ::1 | GET      "/token"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+[GIN] 2022/12/21 - 18:30:14 | 200 |       118.1µs |             ::1 | GET      "/token"
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+[GIN] 2022/12/21 - 18:30:18 | 200 |            0s |             ::1 | GET      "/token"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+[GIN] 2022/12/21 - 18:30:40 | 200 |       725.9µs |             ::1 | GET      "/token"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+[GIN] 2022/12/21 - 18:32:29 | 200 |     44.7639ms |             ::1 | GET      "/token"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN] 2022/12/21 - 18:34:21 | 200 |     38.0341ms |             ::1 | GET      "/token"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN] 2022/12/21 - 18:39:41 | 200 |     35.2062ms |             ::1 | GET      "/token"
+[GIN] 2022/12/21 - 18:39:42 | 200 |            0s |             ::1 | GET      "/token"
+[GIN] 2022/12/21 - 18:39:43 | 200 |            0s |             ::1 | GET      "/token"
+[GIN] 2022/12/21 - 18:39:43 | 200 |            0s |             ::1 | GET      "/token"
+[GIN] 2022/12/21 - 18:39:44 | 200 |            0s |             ::1 | GET      "/token"
+[GIN] 2022/12/21 - 18:39:45 | 200 |            0s |             ::1 | GET      "/token"
+[GIN] 2022/12/21 - 18:46:12 | 200 |            0s |             ::1 | GET      "/token"
+[GIN] 2022/12/21 - 18:46:21 | 404 |            0s |             ::1 | GET      "/parse?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxncCIsImlzcyI6InRlc3QiLCJzdWIiOiJzb21lYm9keSIsImV4cCI6MTY3MTYxOTE4OSwibmJmIjoxNjcxNjE5NTcyLCJpYXQiOjE2NzE2MTk1NzJ9.YnAgnjcDNJs9HE9YQKS8ItobP3mGjEX2GUPfRT_amuc"
+[GIN] 2022/12/21 - 18:46:25 | 404 |            0s |             ::1 | POST     "/parse?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxncCIsImlzcyI6InRlc3QiLCJzdWIiOiJzb21lYm9keSIsImV4cCI6MTY3MTYxOTE4OSwibmJmIjoxNjcxNjE5NTcyLCJpYXQiOjE2NzE2MTk1NzJ9.YnAgnjcDNJs9HE9YQKS8ItobP3mGjEX2GUPfRT_amuc"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN] 2022/12/21 - 18:46:59 | 200 |     35.9273ms |             ::1 | GET      "/token"
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+[GIN] 2022/12/21 - 18:47:12 | 200 |       376.8µs |             ::1 | POST     "/parse?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxncCIsImlzcyI6InRlc3QiLCJzdWIiOiJzb21lYm9keSIsImV4cCI6MTY3MTYxOTYyNCwibmJmIjoxNjcxNjE5NjE5LCJpYXQiOjE2NzE2MTk2MTl9.n6ggrpA6A2mb3tTvQv4NbWxnufA0AVCYaDKEioRiYYY"
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 200
+[GIN] 2022/12/21 - 18:47:19 | 200 |       250.5µs |             ::1 | POST     "/parse?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxncCIsImlzcyI6InRlc3QiLCJzdWIiOiJzb21lYm9keSIsImV4cCI6MTY3MTYxOTYyNCwibmJmIjoxNjcxNjE5NjE5LCJpYXQiOjE2NzE2MTk2MTl9.n6ggrpA6A2mb3tTvQv4NbWxnufA0AVCYaDKEioRiYYY"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN] 2022/12/21 - 18:48:49 | 200 |     39.2997ms |             ::1 | GET      "/token"
+[GIN] 2022/12/21 - 18:49:04 | 200 |            0s |             ::1 | POST     "/parse?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxncCIsImlzcyI6InRlc3QiLCJzdWIiOiJzb21lYm9keSIsImV4cCI6MTY3MTYyMDcyMiwibmJmIjoxNjcxNjE5NzI5LCJpYXQiOjE2NzE2MTk3Mjl9.VpyOfP75GZIUrqxC214YA4SLFUuLlHli7ToMQJvMGFk"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN] 2022/12/21 - 18:49:47 | 200 |       36.16ms |             ::1 | GET      "/token"
+[GIN] 2022/12/21 - 18:50:05 | 200 |       506.5µs |             ::1 | POST     "/parse?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IuaIkeaYr-S9oOeahOecvCIsImlzcyI6InRlc3QiLCJzdWIiOiJzb21lYm9keSIsImV4cCI6MTY3MTYyMDc4NCwibmJmIjoxNjcxNjE5Nzg3LCJpYXQiOjE2NzE2MTk3ODd9.kS88u3avmeUNo7dT2LqUcxNTLpXRIKz-TFbUs0duX0s"

@@ -1,5 +1,9 @@
 package config
 
+import (
+	"time"
+)
+
 type mysqlConfig struct {
 	Addr     string
 	Password string
@@ -14,10 +18,16 @@ type redisConfig struct {
 	PoolSize int
 }
 
+type tokenConfig struct {
+	SigningKey  string
+	ExpiresTime time.Time
+}
+
 type globalConfig struct {
 	Mysql mysqlConfig
 	Redis redisConfig
 	Port  string
+	Token tokenConfig
 }
 
 var GlobalConfig = globalConfig{
@@ -34,4 +44,8 @@ var GlobalConfig = globalConfig{
 		PoolSize: 50,
 	},
 	Port: "8080",
+	Token: tokenConfig{
+		SigningKey:  "e199ad17-c090-43cb-b095-1dc55c209a77",
+		ExpiresTime: time.Now().Add(1000 * time.Second),
+	},
 }
