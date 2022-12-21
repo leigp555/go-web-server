@@ -2,7 +2,10 @@ package server
 
 import (
 	"context"
+	"fmt"
 	"github.com/gin-gonic/gin"
+	"go/note/config"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -11,15 +14,16 @@ import (
 )
 
 func StartServer() {
+	f, _ := os.OpenFile("log/log", os.O_RDWR|os.O_APPEND, 0755)
+	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 	router := gin.Default()
-
 	router.GET("/", func(c *gin.Context) {
 		time.Sleep(5 * time.Second)
 		c.String(http.StatusOK, "Welcome Gin Server")
 	})
 
 	srv := &http.Server{
-		Addr:    ":8080",
+		Addr:    fmt.Sprintf("0.0.0.0:%s", config.GlobalConfig.Port),
 		Handler: router,
 	}
 
