@@ -1,5 +1,7 @@
 package main
 
-func main() {
+import "go/note/server"
 
+func main() {
+	server.StartServer()
 }
