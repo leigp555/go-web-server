@@ -47,11 +47,30 @@ func StartServer() {
 		}
 		c.String(http.StatusOK, username)
 	})
+	// 生成验证码
+	router.GET("/captcha", func(c *gin.Context) {
+		id, captcha, err := util.GetCaptcha()
+		if err != nil {
+			c.JSON(500, gin.H{"msg": "服务器异常，请重试"})
+		}
+		c.JSON(200, gin.H{"id": id, "captcha": captcha})
+	})
+	//解析验证码
+	router.POST("/parseCaptcha", func(c *gin.Context) {
+		id, _ := c.GetQuery("id")
+		code, _ := c.GetQuery("code")
+		ret := util.VerifyCaptcha(id, code)
+		fmt.Println(ret)
+		c.JSON(200, gin.H{"ret": "xxx"})
+	})
+
 	//监听端口
 	srv := &http.Server{
 		Addr:    fmt.Sprintf("0.0.0.0:%s", config.GlobalConfig.Port),
 		Handler: router,
 	}
+
+	fmt.Printf("成功监听%s端口", config.GlobalConfig.Port)
 	//服务启停
 	go func() {
 		// 服务连接

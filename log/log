@@ -160,3 +160,129 @@
 [GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
 [GIN] 2022/12/21 - 18:49:47 | 200 |       36.16ms |             ::1 | GET      "/token"
 [GIN] 2022/12/21 - 18:50:05 | 200 |       506.5µs |             ::1 | POST     "/parse?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IuaIkeaYr-S9oOeahOecvCIsImlzcyI6InRlc3QiLCJzdWIiOiJzb21lYm9keSIsImV4cCI6MTY3MTYyMDc4NCwibmJmIjoxNjcxNjE5Nzg3LCJpYXQiOjE2NzE2MTk3ODd9.kS88u3avmeUNo7dT2LqUcxNTLpXRIKz-TFbUs0duX0s"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN] 2022/12/21 - 19:21:48 | 200 |       2.447ms |             ::1 | GET      "/captcha"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN] 2022/12/21 - 19:22:28 | 200 |      2.6508ms |             ::1 | GET      "/captcha"
+[GIN] 2022/12/21 - 19:22:36 | 200 |      2.6344ms |             ::1 | GET      "/captcha"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN] 2022/12/21 - 19:23:39 | 200 |      4.0626ms |             ::1 | GET      "/captcha"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN] 2022/12/21 - 19:38:06 | 200 |      3.8259ms |             ::1 | GET      "/captcha"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN] 2022/12/21 - 19:52:09 | 200 |       3.738ms |             ::1 | GET      "/captcha"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN-debug] GET    /parseCaptcha             --> go/note/server.StartServer.func5 (3 handlers)
+[GIN] 2022/12/21 - 20:01:47 | 200 |      1.9966ms |             ::1 | GET      "/captcha"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN-debug] GET    /parseCaptcha             --> go/note/server.StartServer.func5 (3 handlers)
+[GIN] 2022/12/21 - 20:03:50 | 200 |      2.3039ms |             ::1 | GET      "/captcha"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN-debug] GET    /parseCaptcha             --> go/note/server.StartServer.func5 (3 handlers)
+[GIN] 2022/12/21 - 20:05:30 | 200 |      3.5358ms |             ::1 | GET      "/captcha"
+[GIN] 2022/12/21 - 20:06:05 | 404 |            0s |             ::1 | POST     "/parseCaptcha?id=BOJo2322bKH0mv6HXcMa&code=2037"
+[GIN] 2022/12/21 - 20:06:27 | 404 |            0s |             ::1 | POST     "/parseCaptcha?id=BOJo2322bKH0mv6HXcMa&code=2037"
+[GIN] 2022/12/21 - 20:07:01 | 404 |            0s |             ::1 | POST     "/parseCaptcha?id=BOJo2322bKH0mv6HXcMa&code=2037"
+[GIN] 2022/12/21 - 20:07:03 | 404 |            0s |             ::1 | POST     "/parseCaptcha?id=BOJo2322bKH0mv6HXcMa&code=2037"
+[GIN] 2022/12/21 - 20:07:07 | 404 |            0s |             ::1 | POST     "/parseCaptcha?id=BOJo2322bKH0mv6HXcMa&code=2037"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN-debug] GET    /parseCaptcha             --> go/note/server.StartServer.func5 (3 handlers)
+[GIN] 2022/12/21 - 20:08:20 | 404 |            0s |             ::1 | POST     "/parseCaptcha?id=BOJo2322bKH0mv6HXcMa&code=2037"
+[GIN] 2022/12/21 - 20:09:14 | 404 |            0s |             ::1 | POST     "/parseCaptcha?id=BOJo2322bKH0mv6HXcMa&code=2037"
+[GIN] 2022/12/21 - 20:09:40 | 404 |            0s |             ::1 | POST     "/parseCaptcha?id=BOJo2322bKH0mv6HXcMa&code=2037"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (3 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (3 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (3 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (3 handlers)
+[GIN-debug] POST   /parseCaptcha             --> go/note/server.StartServer.func5 (3 handlers)
+[GIN] 2022/12/21 - 20:09:51 | 200 |            0s |             ::1 | POST     "/parseCaptcha?id=BOJo2322bKH0mv6HXcMa&code=2037"
+[GIN] 2022/12/21 - 20:10:30 | 200 |      3.3257ms |             ::1 | GET      "/captcha"
+[GIN] 2022/12/21 - 20:11:05 | 200 |            0s |             ::1 | POST     "/parseCaptcha?id=QtY2qK2uOxOqc6DuYJRY&code=5539"
+[GIN] 2022/12/21 - 20:12:49 | 200 |       166.7µs |             ::1 | POST     "/parseCaptcha?id=QtY2qK2uOxOqc6DuYJRY&code=5539"
