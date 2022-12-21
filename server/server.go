@@ -63,6 +63,14 @@ func StartServer() {
 		fmt.Println(ret)
 		c.JSON(200, gin.H{"ret": "xxx"})
 	})
+	//发送邮件
+	router.GET("/email", func(c *gin.Context) {
+		err := util.SendEmail([]string{"122974945@qq.com"})
+		if err != nil {
+			c.JSON(400, gin.H{"msg": "邮件发送失败"})
+		}
+		c.JSON(200, gin.H{"msg": "邮件发送成功"})
+	})
 
 	//监听端口
 	srv := &http.Server{
