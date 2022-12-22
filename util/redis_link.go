@@ -10,7 +10,7 @@ import (
 )
 
 type reDb struct {
-	db *redis.Client
+	Db *redis.Client
 }
 
 var Redb = new(reDb)
@@ -31,7 +31,7 @@ func (*reDb) LinkRedisDB() *redis.Client {
 		log.Panicf("redis数据库连接失败%v\n", err)
 		return nil
 	}
-	Redb.db = rdb
+	Redb.Db = rdb
 	fmt.Println("成功连接redis数据库")
 	return rdb
 }

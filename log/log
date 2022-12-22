@@ -312,3 +312,104 @@
 [GIN-debug] POST   /parseCaptcha             --> go/note/server.StartServer.func5 (4 handlers)
 [GIN-debug] GET    /email                    --> go/note/server.StartServer.func6 (4 handlers)
 [GIN] 2022/12/21 - 21:16:14 | 200 |    5.0109073s |             ::1 | GET      "/"
+[GIN] 2022/12/21 - 21:24:44 | 200 |     5.015703s |             ::1 | GET      "/"
+[GIN] 2022/12/21 - 22:27:59 | 200 |    5.0036082s |             ::1 | GET      "/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /v1/login                 --> go/note/router.UserRouter.func1 (4 handlers)
+[GIN-debug] GET    /v1/register              --> go/note/router.UserRouter.func2 (4 handlers)
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (4 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (4 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (4 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (4 handlers)
+[GIN-debug] POST   /parseCaptcha             --> go/note/server.StartServer.func5 (4 handlers)
+[GIN-debug] GET    /email                    --> go/note/server.StartServer.func6 (4 handlers)
+[GIN] 2022/12/21 - 22:38:44 | 200 |       485.8µs |             ::1 | GET      "/v1/login"
+[GIN] 2022/12/21 - 22:41:13 | 200 |            0s |             ::1 | GET      "/v1/register"
+[GIN] 2022/12/22 - 09:38:37 | 200 |       402.5µs |             ::1 | GET      "/v1/register"
+[GIN] 2022/12/22 - 09:38:42 | 200 |            0s |             ::1 | GET      "/v1/login"
+[GIN] 2022/12/22 - 09:38:48 | 404 |            0s |             ::1 | GET      "/v1/token"
+[GIN] 2022/12/22 - 09:38:55 | 200 |       965.9µs |             ::1 | GET      "/token"
+[GIN] 2022/12/22 - 09:39:04 | 200 |      5.4362ms |             ::1 | GET      "/captcha"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /v1/login                 --> go/note/router.UserRouter.func1 (4 handlers)
+[GIN-debug] GET    /v1/register              --> go/note/router.UserRouter.func2 (4 handlers)
+[GIN-debug] GET    /v1/article               --> go/note/router.ArticleRouter.func1 (4 handlers)
+[GIN-debug] GET    /v1/register              --> go/note/router.ArticleRouter.func2 (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /v1/login                 --> go/note/router.UserRouter.func1 (4 handlers)
+[GIN-debug] GET    /v1/register              --> go/note/router.UserRouter.func2 (4 handlers)
+[GIN-debug] GET    /v1/article               --> go/note/router.ArticleRouter.func1 (4 handlers)
+[GIN-debug] GET    /v1/xxx                   --> go/note/router.ArticleRouter.func2 (4 handlers)
+[GIN-debug] GET    /                         --> go/note/server.StartServer.func1 (4 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func2 (4 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func3 (4 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func4 (4 handlers)
+[GIN-debug] POST   /parseCaptcha             --> go/note/server.StartServer.func5 (4 handlers)
+[GIN-debug] GET    /email                    --> go/note/server.StartServer.func6 (4 handlers)
+[GIN] 2022/12/22 - 10:57:46 | 200 |            0s |             ::1 | GET      "/v1/article"
+[GIN] 2022/12/22 - 10:57:50 | 200 |            0s |             ::1 | GET      "/v1/xxx"
+[GIN] 2022/12/22 - 11:09:18 | 200 |            0s |             ::1 | GET      "/v1/login"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /v1/login                 --> go/note/router.UserRouter.func1 (4 handlers)
+[GIN-debug] GET    /v1/register              --> go/note/router.UserRouter.func2 (4 handlers)
+[GIN-debug] GET    /v1/article               --> go/note/router.ArticleRouter.func1 (4 handlers)
+[GIN-debug] GET    /v1/xxx                   --> go/note/router.ArticleRouter.func2 (4 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func1 (4 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func2 (4 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func3 (4 handlers)
+[GIN-debug] POST   /parseCaptcha             --> go/note/server.StartServer.func4 (4 handlers)
+[GIN-debug] GET    /email                    --> go/note/server.StartServer.func5 (4 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /v1/login                 --> go/note/controller.LoginHandle (4 handlers)
+[GIN-debug] GET    /v1/register              --> go/note/controller.RegisterHandle (4 handlers)
+[GIN-debug] GET    /v1/article               --> go/note/router.ArticleRouter.func1 (4 handlers)
+[GIN-debug] GET    /v1/xxx                   --> go/note/router.ArticleRouter.func2 (4 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func1 (4 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func2 (4 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func3 (4 handlers)
+[GIN-debug] POST   /parseCaptcha             --> go/note/server.StartServer.func4 (4 handlers)
+[GIN-debug] GET    /email                    --> go/note/server.StartServer.func5 (4 handlers)
+[GIN] 2022/12/22 - 13:03:02 | 200 |            0s |             ::1 | GET      "/v1/login"
+[GIN] 2022/12/22 - 13:03:07 | 200 |            0s |             ::1 | GET      "/v1/register"
+[GIN] 2022/12/22 - 13:03:24 | 200 |            0s |             ::1 | GET      "/v1/register"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /v1/login                 --> go/note/controller.LoginHandle (4 handlers)
+[GIN-debug] GET    /v1/register              --> go/note/controller.RegisterHandle (4 handlers)
+[GIN-debug] GET    /v1/article               --> go/note/router.ArticleRouter.func1 (4 handlers)
+[GIN-debug] GET    /v1/xxx                   --> go/note/router.ArticleRouter.func2 (4 handlers)
+[GIN-debug] GET    /token                    --> go/note/server.StartServer.func1 (4 handlers)
+[GIN-debug] POST   /parse                    --> go/note/server.StartServer.func2 (4 handlers)
+[GIN-debug] GET    /captcha                  --> go/note/server.StartServer.func3 (4 handlers)
+[GIN-debug] POST   /parseCaptcha             --> go/note/server.StartServer.func4 (4 handlers)
+[GIN-debug] GET    /email                    --> go/note/server.StartServer.func5 (4 handlers)
+[GIN] 2022/12/22 - 13:03:35 | 200 |            0s |             ::1 | GET      "/v1/register"

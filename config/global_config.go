@@ -9,6 +9,7 @@ type mysqlConfig struct {
 	Password string
 	MaxConn  int
 	MaxOpen  int
+	DB       string
 }
 
 type redisConfig struct {
@@ -36,6 +37,7 @@ var GlobalConfig = globalConfig{
 		Password: "123456",
 		MaxConn:  200,
 		MaxOpen:  100,
+		DB:       "note",
 	},
 	Redis: redisConfig{
 		Addr:     "1.117.141.66:6379",

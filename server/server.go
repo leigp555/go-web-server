@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"go/note/config"
 	"go/note/middleware"
+	"go/note/router"
 	"go/note/util"
 	"io"
 	"log"
@@ -24,16 +25,16 @@ func StartServer() {
 	//gin配置log文件
 	f, _ := os.OpenFile("log/log", os.O_RDWR|os.O_APPEND, 0755)
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
-	router := gin.Default()
-	router.Use(middleware.Cors())
+	r := gin.Default()
+	r.Use(middleware.Cors())
 
 	//注册路由
-	router.GET("/", func(c *gin.Context) {
-		time.Sleep(5 * time.Second)
-		c.String(http.StatusOK, "Welcome Gin Server")
-	})
+	g := r.Group("v1")
+	router.UserRouter(g)
+	router.ArticleRouter(g)
+
 	//获取token
-	router.GET("/token", func(c *gin.Context) {
+	r.GET("/token", func(c *gin.Context) {
 		token, err := util.GenerateToken("我是你的眼")
 		if err != nil {
 			c.JSON(400, gin.H{"msg": "token生成失败"})
@@ -41,7 +42,7 @@ func StartServer() {
 		c.String(http.StatusOK, token)
 	})
 	//解析token
-	router.POST("/parse", func(c *gin.Context) {
+	r.POST("/parse", func(c *gin.Context) {
 		str, _ := c.GetQuery("token")
 		username, err2 := util.ParseToken(str)
 		if err2 != nil {
@@ -50,7 +51,7 @@ func StartServer() {
 		c.String(http.StatusOK, username)
 	})
 	// 生成验证码
-	router.GET("/captcha", func(c *gin.Context) {
+	r.GET("/captcha", func(c *gin.Context) {
 		id, captcha, err := util.GetCaptcha()
 		if err != nil {
 			c.JSON(500, gin.H{"msg": "服务器异常，请重试"})
@@ -58,7 +59,7 @@ func StartServer() {
 		c.JSON(200, gin.H{"id": id, "captcha": captcha})
 	})
 	//解析验证码
-	router.POST("/parseCaptcha", func(c *gin.Context) {
+	r.POST("/parseCaptcha", func(c *gin.Context) {
 		id, _ := c.GetQuery("id")
 		code, _ := c.GetQuery("code")
 		ret := util.VerifyCaptcha(id, code)
@@ -66,7 +67,7 @@ func StartServer() {
 		c.JSON(200, gin.H{"ret": "xxx"})
 	})
 	//发送邮件
-	router.GET("/email", func(c *gin.Context) {
+	r.GET("/email", func(c *gin.Context) {
 		err := util.SendEmail([]string{"122974945@qq.com"})
 		if err != nil {
 			c.JSON(400, gin.H{"msg": "邮件发送失败"})
@@ -77,7 +78,7 @@ func StartServer() {
 	//监听端口
 	srv := &http.Server{
 		Addr:    fmt.Sprintf("0.0.0.0:%s", config.GlobalConfig.Port),
-		Handler: router,
+		Handler: r,
 	}
 
 	fmt.Printf("成功监听%s端口", config.GlobalConfig.Port)
