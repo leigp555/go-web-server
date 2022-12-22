@@ -26,6 +26,7 @@ func InitRouter() {
 	UserRouter(g)
 	ArticleRouter(g)
 	CaptchaRouter(g)
+	EmailCaptchaRouter(g)
 
 	////获取token
 	//r.GET("/token", func(c *gin.Context) {

@@ -2,7 +2,6 @@ package controller
 
 import (
 	"context"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"go/note/model"
 	"go/note/util"
@@ -27,9 +26,8 @@ func RegisterHandle(c *gin.Context) {
 	}
 	//邮箱验证码验证
 	var rdb = util.Redb.Db
-	rKey := fmt.Sprintf("%s_emailCaptchaCode", userInfo.Username)
 	var ctx = context.Background()
-	val, err2 := rdb.Get(ctx, rKey).Result()
+	val, err2 := rdb.Get(ctx, userInfo.Email).Result()
 	if err2 != nil || val != userInfo.EmailCaptchaCode {
 		c.JSON(400, gin.H{"code": 400, "errMsg": "邮箱验证码不正确"})
 	}
