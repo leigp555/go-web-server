@@ -13,7 +13,7 @@ func SendEmail(emailNumber []string, randStr string) (err error) {
 	// 设置接收方的邮箱
 	e.To = emailNumber
 	//设置主题
-	e.Subject = "这是主题"
+	e.Subject = "Email"
 	//设置文件发送的内容
 
 	htmlStr := fmt.Sprintf(`

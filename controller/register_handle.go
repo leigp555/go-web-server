@@ -23,6 +23,7 @@ func RegisterHandle(c *gin.Context) {
 	if err != nil {
 		msg := util.GetValidMsg(err, &userInfo)
 		c.JSON(400, gin.H{"code": 400, "errMsg": msg})
+		return
 	}
 	//邮箱验证码验证
 	var rdb = util.Redb.Db
@@ -30,11 +31,13 @@ func RegisterHandle(c *gin.Context) {
 	val, err2 := rdb.Get(ctx, userInfo.Email).Result()
 	if err2 != nil || val != userInfo.EmailCaptchaCode {
 		c.JSON(400, gin.H{"code": 400, "errMsg": "邮箱验证码不正确"})
+		return
 	}
 	//图形验证码验证
 	isRight := util.VerifyCaptcha(userInfo.CaptchaId, userInfo.CaptchaCode)
 	if !isRight {
 		c.JSON(400, gin.H{"code": 400, "errMsg": "图形验证码错误"})
+		return
 	}
 	//数据验证通过,将用户信息保存在数据库中
 	user := model.User{
