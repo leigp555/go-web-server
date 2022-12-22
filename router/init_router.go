@@ -6,7 +6,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"go/note/config"
 	"go/note/middleware"
-	"go/note/util"
 	"io"
 	"log"
 	"net/http"
@@ -26,48 +25,49 @@ func InitRouter() {
 	g := r.Group("v1")
 	UserRouter(g)
 	ArticleRouter(g)
+	CaptchaRouter(g)
 
-	//获取token
-	r.GET("/token", func(c *gin.Context) {
-		token, err := util.GenerateToken("我是你的眼")
-		if err != nil {
-			c.JSON(400, gin.H{"msg": "token生成失败"})
-		}
-		c.String(http.StatusOK, token)
-	})
-	//解析token
-	r.POST("/parse", func(c *gin.Context) {
-		str, _ := c.GetQuery("token")
-		username, err2 := util.ParseToken(str)
-		if err2 != nil {
-			c.JSON(400, gin.H{"msg": "token验证失败"})
-		}
-		c.String(http.StatusOK, username)
-	})
-	// 生成验证码
-	r.GET("/captcha", func(c *gin.Context) {
-		id, captcha, err := util.GetCaptcha()
-		if err != nil {
-			c.JSON(500, gin.H{"msg": "服务器异常，请重试"})
-		}
-		c.JSON(200, gin.H{"id": id, "captcha": captcha})
-	})
-	//解析验证码
-	r.POST("/parseCaptcha", func(c *gin.Context) {
-		id, _ := c.GetQuery("id")
-		code, _ := c.GetQuery("code")
-		ret := util.VerifyCaptcha(id, code)
-		fmt.Println(ret)
-		c.JSON(200, gin.H{"ret": "xxx"})
-	})
-	//发送邮件
-	r.GET("/email", func(c *gin.Context) {
-		err := util.SendEmail([]string{"122974945@qq.com"})
-		if err != nil {
-			c.JSON(400, gin.H{"msg": "邮件发送失败"})
-		}
-		c.JSON(200, gin.H{"msg": "邮件发送成功"})
-	})
+	////获取token
+	//r.GET("/token", func(c *gin.Context) {
+	//	token, err := util.GenerateToken("我是你的眼")
+	//	if err != nil {
+	//		c.JSON(400, gin.H{"msg": "token生成失败"})
+	//	}
+	//	c.String(http.StatusOK, token)
+	//})
+	////解析token
+	//r.POST("/parse", func(c *gin.Context) {
+	//	str, _ := c.GetQuery("token")
+	//	username, err2 := util.ParseToken(str)
+	//	if err2 != nil {
+	//		c.JSON(400, gin.H{"msg": "token验证失败"})
+	//	}
+	//	c.String(http.StatusOK, username)
+	//})
+	//// 生成验证码
+	//r.GET("/captcha", func(c *gin.Context) {
+	//	id, captcha, err := util.GetCaptcha()
+	//	if err != nil {
+	//		c.JSON(500, gin.H{"msg": "服务器异常，请重试"})
+	//	}
+	//	c.JSON(200, gin.H{"id": id, "captcha": captcha})
+	//})
+	////解析验证码
+	//r.POST("/parseCaptcha", func(c *gin.Context) {
+	//	id, _ := c.GetQuery("id")
+	//	code, _ := c.GetQuery("code")
+	//	ret := util.VerifyCaptcha(id, code)
+	//	fmt.Println(ret)
+	//	c.JSON(200, gin.H{"ret": "xxx"})
+	//})
+	////发送邮件
+	//r.GET("/email", func(c *gin.Context) {
+	//	err := util.SendEmail([]string{"122974945@qq.com"})
+	//	if err != nil {
+	//		c.JSON(400, gin.H{"msg": "邮件发送失败"})
+	//	}
+	//	c.JSON(200, gin.H{"msg": "邮件发送成功"})
+	//})
 
 	//监听端口
 	srv := &http.Server{
