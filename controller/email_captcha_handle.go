@@ -13,7 +13,7 @@ import (
 
 func EmailCaptchaHandle(c *gin.Context) {
 	type UserEmail struct {
-		Email string `json:"email" binding:"required" msg:"邮箱格式不正确"`
+		Email string `json:"email" binding:"required,email" msg:"邮箱格式不正确"`
 	}
 	var userEmail UserEmail
 

@@ -9,11 +9,11 @@ import (
 
 func RegisterHandle(c *gin.Context) {
 	type UserInfo struct {
-		Username         string `json:"username" binding:"required;min=3;max=20" msg:"用户名不能为空,且长度为3~20位"`
-		Password         string `json:"password" binding:"required;min=6;max=12" msg:"密码不能为空,且长度为6~12位"`
-		RePassword       string `json:"re_password" binding:"required;min=6;max=12;eqfield=Password" msg:"两次输入的密码不一致"`
-		Email            string `json:"email" binding:"required;email" msg:"请输入正确的邮箱"`
-		EmailCaptchaCode string `json:"email_captcha_code" binding:"required;len=6" msg:"邮箱验证码不正确"`
+		Username         string `json:"username" binding:"required,min=3,max=20" msg:"用户名不能为空,且长度为3~20位"`
+		Password         string `json:"password" binding:"required,min=6,max=12" msg:"密码不能为空,且长度为6~12位"`
+		RePassword       string `json:"re_password" binding:"required,min=6,max=12,eqfield=Password" msg:"两次输入的密码不一致"`
+		Email            string `json:"email" binding:"required,email" msg:"请输入正确的邮箱"`
+		EmailCaptchaCode string `json:"email_captcha_code" binding:"required,len=6" msg:"邮箱验证码不正确"`
 		CaptchaId        string `json:"captcha_id" binding:"required" msg:"图形验证码不正确"`
 		CaptchaCode      string `json:"captcha_code" binding:"required" msg:"图形验证码不正确"`
 	}
