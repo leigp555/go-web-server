@@ -1,6 +1,7 @@
 package model
 
 import (
+	"fmt"
 	"go/note/util"
 	"gorm.io/gorm"
 	"log"
@@ -12,14 +13,11 @@ type User struct {
 	gorm.Model
 }
 
-func init() {
+func (User) Generate() {
 	var db = util.Mydb.Db
 	err := db.AutoMigrate(&User{})
+	fmt.Printf("我是db%v", db)
 	if err != nil {
-		log.Panicln("表创建失败")
+		log.Panicln("User表创建失败")
 	}
-	u1 := User{Name: "七米", Age: 18}
-	u2 := User{Name: "沙河娜扎", Age: 22}
-	db.Create(&u1)
-	db.Create(&u2)
 }

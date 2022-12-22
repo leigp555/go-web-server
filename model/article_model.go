@@ -12,14 +12,11 @@ type Article struct {
 	gorm.Model
 }
 
-func init() {
+// Generate 创建文章表
+func (Article) Generate() {
 	var db = util.Mydb.Db
-	err := db.AutoMigrate(&User{})
+	err := db.AutoMigrate(&Article{})
 	if err != nil {
-		log.Panicln("表创建失败")
+		log.Panicln("Article表创建失败")
 	}
-	a1 := Article{Title: "七米", Content: "放过"}
-	a2 := Article{Title: "沙河娜扎", Content: "只是"}
-	db.Create(&a1)
-	db.Create(&a2)
 }

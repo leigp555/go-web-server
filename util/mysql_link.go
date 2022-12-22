@@ -1,7 +1,6 @@
 package util
 
 import (
-	"database/sql"
 	"fmt"
 	"go/note/config"
 	"gorm.io/driver/mysql"
@@ -27,13 +26,6 @@ func (db *myDb) LinkMysqlDB() *gorm.DB {
 		return nil
 	}
 	sqlDb, _ := d.DB()
-	defer func(sqlDb *sql.DB) {
-		err := sqlDb.Close()
-		if err != nil {
-			fmt.Println("断开mysql失败")
-		}
-	}(sqlDb)
-
 	//设置连接池
 	sqlDb.SetMaxIdleConns(config.GlobalConfig.Mysql.MaxConn) //设置最大连接数
 	sqlDb.SetMaxOpenConns(config.GlobalConfig.Mysql.MaxConn) //设置最大的空闲连接数
