@@ -7,9 +7,9 @@ import (
 )
 
 type Article struct {
+	gorm.Model
 	Title   string
 	Content string
-	gorm.Model
 }
 
 // Generate 创建文章表

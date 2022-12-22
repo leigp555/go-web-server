@@ -8,9 +8,10 @@ import (
 )
 
 type User struct {
-	Name string
-	Age  int
 	gorm.Model
+	Username string `gorm:"type:varchar(20);comment: 用户名"`
+	Password string `gorm:"type:varchar(20);comment:密码"`
+	Email    string `gorm:"type:varchar(20);unique_index;comment:邮箱"`
 }
 
 func (User) Generate() {
