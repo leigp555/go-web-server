@@ -34,7 +34,7 @@ func GenerateToken(username string) (tokenStr string, err error) {
 	return tokenStr, err
 }
 
-func ParseToken(tokenStr string) (username string, err error) {
+func ParseToken(tokenStr string) (userId string, err error) {
 	fmt.Println(tokenStr)
 	token, _ := jwt.ParseWithClaims(tokenStr, &MyCustomClaims{}, func(token *jwt.Token) (interface{}, error) {
 		return []byte(config.GlobalConfig.Token.SigningKey), nil

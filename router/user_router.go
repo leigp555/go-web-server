@@ -5,7 +5,11 @@ import (
 	"go/note/controller"
 )
 
-func UserRouter(r *gin.RouterGroup) {
-	r.GET("/login", controller.LoginHandle)
-	r.GET("/register", controller.RegisterHandle)
+func UserRouter(router *gin.RouterGroup) {
+	r := router.Group("")
+	{
+		r.GET("/login", controller.LoginHandle)
+		r.GET("/register", controller.RegisterHandle)
+	}
+
 }
