@@ -6,6 +6,7 @@ import (
 )
 
 func ArticleRouter(router *gin.RouterGroup) {
+	//需要权限的路由组,添加token中间件验证
 	r := router.Group("").Use(middleware.TokenVerify())
 	{
 		r.GET("/article", func(c *gin.Context) {

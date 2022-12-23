@@ -16,6 +16,7 @@ func TokenVerify() gin.HandlerFunc {
 		//从请求头获取token失败
 		if tokenHeader == "" {
 			c.JSON(401, gin.H{"msg": "请上传身份凭证"})
+			c.Abort()
 			return
 		}
 		//拆分出token
@@ -30,6 +31,7 @@ func TokenVerify() gin.HandlerFunc {
 		}
 		var dbUser = model.User{}
 		mdb.Where("id = ?", userId).First(&dbUser)
+		//将用户的信息传给其余的中间件
 		c.Set("userId", dbUser.ID)
 		c.Set("userEmail", dbUser.Email)
 	}
