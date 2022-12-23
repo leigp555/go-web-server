@@ -40,11 +40,16 @@ func LoginHandle(c *gin.Context) {
 		c.JSON(400, gin.H{"code": 400, "errors": map[string]any{"body": []string{"用户还未注册,请先注册"}}})
 		return
 	}
+	//验证密码
+	if u.Password != userInfo.User.Password {
+		c.JSON(400, gin.H{"code": 400, "errors": map[string]any{"body": []string{"用户名或密码不正确"}}})
+		return
+	}
 	//签发token
 	token, err2 := util.GenerateToken(strconv.Itoa(int(u.ID)))
 	if err2 != nil {
 		c.JSON(500, gin.H{"code": 500, "errors": map[string]any{"body": []string{"服务器异常,请稍后再试"}}})
 		return
 	}
-	c.JSON(200, gin.H{"code": 200, "msg": "登录成功", "token": token, "user": map[string]any{"email": userInfo.User.Email}})
+	c.JSON(200, gin.H{"code": 200, "msg": "登录成功", "token": token, "user": map[string]any{"email": u.Email, "username": u.Username}})
 }
