@@ -32,7 +32,7 @@ func InitRouter() {
 		Handler: r,
 	}
 
-	fmt.Printf("成功监听%s端口", config.GlobalConfig.Port)
+	fmt.Printf("成功监听%s端口\n", config.GlobalConfig.Port)
 	//服务启停
 	go func() {
 		// 服务连接
