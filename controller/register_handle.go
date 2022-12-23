@@ -54,7 +54,7 @@ func RegisterHandle(c *gin.Context) {
 	//数据验证通过,将用户信息保存在数据库中
 	user := model.User{
 		Username: userInfo.User.Username,
-		Password: userInfo.User.Password,
+		Password: util.Md5Str(userInfo.User.Password),
 		Email:    userInfo.User.Email,
 	}
 	mdb.Create(&user)

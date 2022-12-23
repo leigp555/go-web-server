@@ -41,7 +41,7 @@ func LoginHandle(c *gin.Context) {
 		return
 	}
 	//验证密码
-	if u.Password != userInfo.User.Password {
+	if u.Password != util.Md5Str(userInfo.User.Password) {
 		c.JSON(400, gin.H{"code": 400, "errors": map[string]any{"body": []string{"用户名或密码不正确"}}})
 		return
 	}
