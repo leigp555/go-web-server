@@ -20,9 +20,8 @@ func InitRouter() {
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 	r := gin.Default()
 	r.Use(middleware.Cors())
-
+	g := r.Group("v1/api")
 	//注册路由
-	g := r.Group("v1")
 	UserRouter(g)
 	ArticleRouter(g)
 	CaptchaRouter(g)
