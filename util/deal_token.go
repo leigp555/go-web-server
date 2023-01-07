@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/golang-jwt/jwt/v4"
-	"go/note/config"
+	"img.server/config"
 	"time"
 )
 

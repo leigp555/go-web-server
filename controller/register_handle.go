@@ -3,8 +3,8 @@ package controller
 import (
 	"context"
 	"github.com/gin-gonic/gin"
-	"go/note/model"
-	"go/note/util"
+	"img.server/model"
+	"img.server/util"
 )
 
 func RegisterHandle(c *gin.Context) {

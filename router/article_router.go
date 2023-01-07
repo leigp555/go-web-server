@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"go/note/middleware"
+	"img.server/middleware"
 )
 
 func ArticleRouter(router *gin.RouterGroup) {

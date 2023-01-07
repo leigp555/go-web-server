@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"go/note/controller"
+	"img.server/controller"
 )
 
 func CaptchaRouter(r *gin.RouterGroup) {

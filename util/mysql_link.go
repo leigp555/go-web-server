@@ -2,10 +2,10 @@ package util
 
 import (
 	"fmt"
-	"go/note/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
+	"img.server/config"
 	"log"
 )
 

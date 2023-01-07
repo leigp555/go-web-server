@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"go/note/config"
-	"go/note/middleware"
+	"img.server/config"
+	"img.server/middleware"
 	"io"
 	"log"
 	"net/http"
@@ -19,6 +19,7 @@ func InitRouter() {
 	f, _ := os.OpenFile("log/log", os.O_RDWR|os.O_APPEND, 0755)
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 	r := gin.Default()
+	//允许跨域
 	r.Use(middleware.Cors())
 	g := r.Group("v1/api")
 	//注册路由

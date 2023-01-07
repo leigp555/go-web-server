@@ -2,9 +2,9 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"go/note/controller"
+	"img.server/controller"
 )
 
 func EmailCaptchaRouter(r *gin.RouterGroup) {
-	r.GET("/email/captcha", controller.EmailCaptchaHandle)
+	r.POST("/email/captcha", controller.EmailCaptchaHandle)
 }

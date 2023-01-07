@@ -1,8 +1,8 @@
 package model
 
 import (
-	"go/note/util"
 	"gorm.io/gorm"
+	"img.server/util"
 	"log"
 )
 

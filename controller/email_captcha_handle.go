@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"go/note/util"
+	"img.server/util"
 	"math/rand"
 	"strconv"
 	"strings"

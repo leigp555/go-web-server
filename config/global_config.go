@@ -33,11 +33,11 @@ type globalConfig struct {
 
 var GlobalConfig = globalConfig{
 	Mysql: mysqlConfig{
-		Addr:     "127.0.0.1:3306",
-		Password: "123456",
+		Addr:     "1.117.141.66:3306",
+		Password: "lgp123456",
 		MaxConn:  200,
 		MaxOpen:  100,
-		DB:       "note",
+		DB:       "img",
 	},
 	Redis: redisConfig{
 		Addr:     "1.117.141.66:6379",

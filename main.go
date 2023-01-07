@@ -1,6 +1,6 @@
 package main
 
-import "go/note/server"
+import "img.server/server"
 
 func main() {
 	server.StartServer()

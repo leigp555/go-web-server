@@ -2,8 +2,8 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"go/note/model"
-	"go/note/util"
+	"img.server/model"
+	"img.server/util"
 	"strings"
 )
 

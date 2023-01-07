@@ -1,9 +1,9 @@
 package server
 
 import (
-	"go/note/model"
-	"go/note/router"
-	"go/note/util"
+	"img.server/model"
+	"img.server/router"
+	"img.server/util"
 )
 
 func StartServer() {

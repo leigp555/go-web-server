@@ -27,8 +27,8 @@ func GetCaptcha() (string, string, error) {
 		DriverAudio: &base64Captcha.DriverAudio{},
 		DriverString: &base64Captcha.DriverString{
 			Length:          4,
-			Height:          60,
-			Width:           240,
+			Height:          40,
+			Width:           100,
 			ShowLineOptions: 2,
 			NoiseCount:      0,
 			Source:          "1234567890",

@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/go-redis/redis/v9"
-	"go/note/config"
+	"img.server/config"
 	"log"
 	"time"
 )
