@@ -22,7 +22,7 @@ var store = base64Captcha.DefaultMemStore
 func GetCaptcha() (string, string, error) {
 	var param = configJsonBody{
 		Id:          "",
-		CaptchaType: "string",
+		CaptchaType: "",
 		VerifyValue: "",
 		DriverAudio: &base64Captcha.DriverAudio{},
 		DriverString: &base64Captcha.DriverString{
@@ -34,8 +34,17 @@ func GetCaptcha() (string, string, error) {
 			Source:          "1234567890",
 		},
 		DriverChinese: &base64Captcha.DriverChinese{},
-		DriverMath:    &base64Captcha.DriverMath{},
-		DriverDigit:   &base64Captcha.DriverDigit{},
+		DriverMath: &base64Captcha.DriverMath{
+			Height: 40,
+			Width:  100,
+		},
+		DriverDigit: &base64Captcha.DriverDigit{
+			Height:   40,
+			Width:    100,
+			Length:   4,
+			MaxSkew:  0.4,
+			DotCount: 50,
+		},
 	}
 	var driver base64Captcha.Driver
 	//create base64 encoding captcha
