@@ -6,10 +6,10 @@ import (
 )
 
 func UserRouter(router *gin.RouterGroup) {
-	r := router.Group("users")
+	r := router.Group("user")
 	{
-		r.GET("/login", controller.LoginHandle)
-		r.GET("/", controller.RegisterHandle)
+		r.POST("/login", controller.LoginHandle)
+		r.POST("/register", controller.RegisterHandle)
 	}
 
 }
