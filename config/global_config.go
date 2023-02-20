@@ -34,7 +34,7 @@ type globalConfig struct {
 var GlobalConfig = globalConfig{
 	Mysql: mysqlConfig{
 		Addr:     "1.117.141.66:3306",
-		Password: "lgp123456",
+		Password: "lgp1234567",
 		MaxConn:  200,
 		MaxOpen:  100,
 		DB:       "img",
